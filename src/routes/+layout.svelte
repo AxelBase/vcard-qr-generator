@@ -3,7 +3,7 @@
   import { fly } from 'svelte/transition';
   import '../app.css';
 
-  const paypalUsername = ''; // Replace with your actual username later
+  const paypalUsername = 'AxelLab427'; // Replace with your actual username later
   const donationAmounts = [1, 3, 5, 10];
   let isDropdownOpen = false;
 
