@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AxelBase – vCard/Contact QR Generator</title>
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+		<link href="../../_app/immutable/assets/app.CLprkRBU.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/8.CvybM9t8.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.N_qnBbc9.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BcpGWRCH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C9R_l6na.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/FRUwawlf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/e8RGmm3f.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Cd9ZP6bH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DK4SC5ly.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DZCj5ofS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BAu4hxj7.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Djs4OXK2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B4J7Nwau.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.C1k9clOm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DT6cJR1v.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CmbYuboq.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/X4hdWM3d.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B_sHA-7X.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/8.FEWR2wjk.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/avRdB4DY.js"><!--1li990r--><meta name="description" content="How adapter-static + client-side generation creates truly private, offline-first contact tools with no tracking or server dependency."/> <meta property="og:title" content="Building Fully Static, Zero-JS-Framework QR Tools with SvelteKit"/> <meta property="og:description" content="How adapter-static + client-side generation creates truly private, offline-first contact tools with no tracking or server dependency."/> <meta property="og:url" content="../../blog/posts/post5"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Building Fully Static, Zero-JS-Framework QR Tools with SvelteKit</title>
+</head>
+
+<body data-bs-theme="light" class="bg-light">
+
+    <!--[--><!--[--><!----><header class="custom-navbar"><nav class="nav-container"><div class="brand-section"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="AxelLab Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div style="width: 1px; height: 25px; background: #ccc; margin: 0 5px;"></div> <div class="bmac-wrapper"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span class="d-none d-sm-inline">Buy me a coffee</span></button> <!--[!--><!--]--></div></div> <ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <!--[--><!----><div class="container fade-in post-layout svelte-1li990r"><div class="breadcrumbs svelte-1li990r"><a href="../../blog" class="svelte-1li990r">Blog</a> <span>/</span> <p class="svelte-1li990r">Static Sites + Dynamic QR Codes</p></div> <article class="prose svelte-1li990r"><h1 class="svelte-1li990r">Building Fully Static, Zero-JS-Framework QR Tools with SvelteKit</h1> <p class="post-meta svelte-1li990r">Published: November 20, 2025</p> <p class="svelte-1li990r">This vCard QR generator runs entirely in your browser — no server, no analytics, no cookies. Here’s how SvelteKit makes that possible.</p> <h2 class="svelte-1li990r">The Core Trick: adapter-static + Client-Side Generation</h2> <p class="svelte-1li990r">Using <code>@sveltejs/adapter-static</code>, the entire site builds to pure HTML/CSS/JS. All vCard and QR generation happens 100% client-side using <code>vcard-creator</code> and <code>Qrious</code>.</p> <h2 class="svelte-1li990r">Key Technical Advantages</h2> <ul class="svelte-1li990r"><li class="svelte-1li990r">No backend = no attack surface</li> <li class="svelte-1li990r">No database = no data collection</li> <li class="svelte-1li990r">No cookies = no tracking</li> <li class="svelte-1li990r">Works offline (after first load)</li> <li class="svelte-1li990r">Deployable to GitHub Pages, Netlify, Vercel, or any static host</li></ul> <h2 class="svelte-1li990r">Bundle Size Reality</h2> <p class="svelte-1li990r">Final production build: ~185 KB gzipped<br/> QRious: 26 KB<br/> vcard-creator: 8 KB<br/> Everything else: vanilla SvelteKit</p> <h2 class="svelte-1li990r">Privacy by Design</h2> <p class="svelte-1li990r">No telemetry. No Google Analytics. No Facebook Pixel. No “contact form” that phones home. Your contact data never leaves your device — not even temporarily.</p> <h2 class="svelte-1li990r">Why This Matters</h2> <p class="svelte-1li990r">Most online QR generators log your data. Some inject tracking URLs. Some add their owny logo. This tool does none of that.</p> <p class="italic-note svelte-1li990r">True privacy isn’t a feature — it’s the default when you remove the server.</p></article></div><!----><!--]--> <footer class="custom-footer"><span>© AxelBase vCard - Contact QR Generator – 2025</span> <div class="footer-links"><span>|</span> <a href="../../privacy" class="footer-link">Privacy</a> <a href="../../terms" class="footer-link">Terms</a></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_a6k182 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/vcard-qr-generator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.N_qnBbc9.js"),
+						import("../../_app/immutable/entry/app.Cd9ZP6bH.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

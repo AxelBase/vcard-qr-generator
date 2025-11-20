@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AxelBase – vCard/Contact QR Generator</title>
+    <link rel="icon" href="../../AxelLab-Logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+		<link href="../../_app/immutable/assets/app.CLprkRBU.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/7.RM8T83JL.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.N_qnBbc9.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BcpGWRCH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/C9R_l6na.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/FRUwawlf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/e8RGmm3f.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.Cd9ZP6bH.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DK4SC5ly.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DZCj5ofS.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/BAu4hxj7.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Djs4OXK2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B4J7Nwau.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.C1k9clOm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/DT6cJR1v.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CmbYuboq.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/X4hdWM3d.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/B_sHA-7X.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/7.BARZHhWt.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/avRdB4DY.js"><!--led0iy--><meta name="description" content="How to safely strip unused vCard 3.0 properties while maintaining 100% compatibility with iOS, Android, Outlook, and macOS Contacts."/> <meta property="og:title" content="Minimizing vCard Payload: Removing Redundant Fields Without Breaking Compatibility"/> <meta property="og:description" content="How to safely strip unused vCard 3.0 properties while maintaining 100% compatibility with iOS, Android, Outlook, and macOS Contacts."/> <meta property="og:url" content="../../blog/posts/post4"/> <meta property="og:type" content="article"/> <meta name="twitter:card" content="summary_large_image"/><!----><title>Minimizing vCard Payload: Removing Redundant Fields Without Breaking Compatibility</title>
+</head>
+
+<body data-bs-theme="light" class="bg-light">
+
+    <!--[--><!--[--><!----><header class="custom-navbar"><nav class="nav-container"><div class="brand-section"><a href="../../" aria-label="Home"><img src="../../AxelLab-Logo.ico" alt="AxelLab Logo" class="navbar-brand-logo"/></a> <a class="navbar-brand-text" href="../../">AxelBase</a> <div style="width: 1px; height: 25px; background: #ccc; margin: 0 5px;"></div> <div class="bmac-wrapper"><button class="bmac-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.35,22.2L12,22A10,10,0,0,1,2,12V10A2,2,0,0,1,4,8H7.2A5.13,5.13,0,0,1,12,3A5.13,5.13,0,0,1,16.8,8H20A2,2,0,0,1,22,10V12A10,10,0,0,1,12.35,22.2M4,10V12A8,8,0,0,0,12,20A8,8,0,0,0,20,12V10H16.8A5.11,5.11,0,0,1,12.5,5.12A5.15,5.15,0,0,1,7.2,10H4Z"></path></svg> <span class="d-none d-sm-inline">Buy me a coffee</span></button> <!--[!--><!--]--></div></div> <ul class="nav-links"><li><a class="nav-link" href="../../">Home</a></li> <li><a class="nav-link" href="../../#about">About</a></li> <li><a class="nav-link" href="../../#how-to">How to use</a></li> <li><a class="nav-link" href="../../#faq">FAQ</a></li> <li><a class="nav-link" href="../../blog">Blog</a></li></ul></nav></header> <!--[--><!----><div class="container fade-in post-layout svelte-led0iy"><div class="breadcrumbs svelte-led0iy"><a href="../../blog" class="svelte-led0iy">Blog</a> <span>/</span> <p class="svelte-led0iy">Minimizing vCard Payload</p></div> <article class="prose svelte-led0iy"><h1 class="svelte-led0iy">Minimizing vCard Payload: Removing Redundant Fields Without Breaking Compatibility</h1> <p class="post-meta svelte-led0iy">Published: November 20, 2025</p> <p class="svelte-led0iy">A bloated vCard increases QR code version, reduces scannability, and wastes space. Here’s exactly which fields you can safely remove — and which you must keep.</p> <h2 class="svelte-led0iy">Safe to Remove (99.9% of use cases)</h2> <ul class="svelte-led0iy"><li class="svelte-led0iy"><code>PRODID</code> — generator signature (e.g. -//Apple Inc.//iOS)</li> <li class="svelte-led0iy"><code>REV</code> — revision timestamp</li> <li class="svelte-led0iy"><code>NICKNAME</code> — rarely imported</li> <li class="svelte-led0iy"><code>CATEGORIES</code> — ignored by most clients</li> <li class="svelte-led0iy"><code>CLASS</code> — obsolete access control</li> <li class="svelte-led0iy"><code>KEY</code> — public key (not used in contact sharing)</li> <li class="svelte-led0iy"><code>MAILER</code>, <code>AGENT</code>, <code>LABEL</code> — legacy fields</li></ul> <h2 class="svelte-led0iy">Keep These (Required for Compatibility)</h2> <ul class="svelte-led0iy"><li class="svelte-led0iy"><code>BEGIN:VCARD</code> and <code>END:VCARD</code></li> <li class="svelte-led0iy"><code>VERSION:3.0</code> — mandatory</li> <li class="svelte-led0iy"><code>N:</code> — structured name (even if empty)</li> <li class="svelte-led0iy"><code>FN:</code> — formatted name (display name)</li> <li class="svelte-led0iy"><code>TEL</code>, <code>EMAIL</code>, <code>URL</code>, <code>ADR</code> — as needed</li></ul> <h2 class="svelte-led0iy">Real-World Payload Reduction</h2> <p class="svelte-led0iy">Typical bloated generator output: 920 bytes<br/> After removing safe fields: 480 bytes (48% reduction)</p> <p class="svelte-led0iy">This drops a Version 11 QR code down to Version 7 — dramatically improving scan speed and reliability.</p> <h2 class="svelte-led0iy">Tested Compatibility Matrix</h2> <ul class="svelte-led0iy"><li class="svelte-led0iy">iOS 18 Contacts — Works perfectly</li> <li class="svelte-led0iy">Android 15 Google Contacts — Works perfectly</li> <li class="svelte-led0iy">Outlook 365 — Works perfectly</li> <li class="svelte-led0iy">macOS Contacts — Works perfectly</li> <li class="svelte-led0iy">Windows 11 Phone Link — Works perfectly</li></ul> <h2 class="svelte-led0iy">Recommendation</h2> <p class="svelte-led0iy">Strip all non-essential fields. The only fields that matter for contact import are <code>N</code>, <code>FN</code>, and your actual contact data. Everything else is bloat.</p> <p class="italic-note svelte-led0iy">Smaller vCard = smaller QR = faster, more reliable scanning.</p></article></div><!----><!--]--> <footer class="custom-footer"><span>© AxelBase vCard - Contact QR Generator – 2025</span> <div class="footer-links"><span>|</span> <a href="../../privacy" class="footer-link">Privacy</a> <a href="../../terms" class="footer-link">Terms</a></div></footer><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_a6k182 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						assets: "/vcard-qr-generator"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.N_qnBbc9.js"),
+						import("../../_app/immutable/entry/app.Cd9ZP6bH.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 7],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

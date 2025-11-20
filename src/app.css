@@ -1,0 +1,296 @@
+/* src/app.css */
+
+:root {
+  --brand-color: #922B3E; /* Red Violet */
+  --brand-hover: #752232;
+  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --outline-color: #000000;
+  --navbar-height: 80px;
+  --footer-height: 60px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Padding to prevent content from being hidden behind fixed header/footer */
+  padding-top: calc(var(--navbar-height) + 20px);
+  padding-bottom: calc(var(--footer-height) + 20px);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* --- Global Utilities & Animations --- */
+.container {
+  max-width: 900px;
+}
+
+/* Smooth Fade In Animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* --- Fancy Inputs --- */
+.form-control, .form-select {
+  border: 2px solid var(--outline-color);
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 4px rgba(146, 43, 62, 0.1);
+}
+
+/* --- Buttons --- */
+.btn {
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid var(--outline-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--brand-color);
+  border-color: var(--outline-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-hover);
+  border-color: var(--outline-color);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--outline-color);
+}
+
+.btn-outline-secondary {
+  color: var(--text-color);
+  border-color: var(--outline-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f0f0f0;
+  color: var(--brand-color);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--outline-color);
+}
+
+/* --- Navbar Styles --- */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--outline-color);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-brand-logo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+.navbar-brand-logo:hover {
+  transform: rotate(-10deg);
+}
+
+.navbar-brand-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--brand-color);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--brand-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--brand-color);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Buy Me A Coffee Button --- */
+.bmac-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bmac-button {
+  background: white;
+  border: 2px solid var(--brand-color);
+  color: var(--brand-color);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.bmac-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.bmac-button:hover, .bmac-button.active {
+  background: var(--brand-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(146, 43, 62, 0.3);
+  transform: translateY(-1px);
+}
+
+.bmac-dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  border: 2px solid var(--brand-color);
+  border-radius: 12px;
+  width: 100%;
+  min-width: 120px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.bmac-dropdown a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.bmac-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.bmac-dropdown a:hover {
+  background: var(--brand-color);
+  color: white;
+}
+
+/* --- Fixed Footer --- */
+.custom-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-height);
+  background: var(--brand-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--outline-color);
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  margin-left: 15px;
+}
+
+.footer-link {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .navbar-brand-text {
+    display: none; /* Hide text on small screens to save space */
+  }
+
+  :root {
+    --navbar-height: 120px;
+  }
+}
